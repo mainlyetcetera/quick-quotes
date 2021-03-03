@@ -8,11 +8,15 @@ assignees: ''
 
 *As a User...*
 
+
 *When I...*
+
 
 *I want to...*
 
+
 *So that...*
+
 
 **The Acceptance Criteria:**
 
