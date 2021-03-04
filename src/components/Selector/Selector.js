@@ -1,8 +1,17 @@
 import React from 'react'
+import './Selector.css'
 
 const Selector = () => {
   return (
-    <h1>Selector</h1>
+    <form>
+      <select
+        className='select-box'
+      >
+        <option value=''>
+          Please pick a category
+        </option>
+      </select>
+    </form>
   )
 }
 
