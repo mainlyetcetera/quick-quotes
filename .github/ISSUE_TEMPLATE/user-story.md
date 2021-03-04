@@ -1,14 +1,10 @@
 ---
 name: User Story
 about: A user story with acceptance criteria that must be met
-title: 'User Story: [description]'
-labels: enhancement
+title: ''
+labels: enhancement, documentation
 assignees: ''
 ---
-
-*As a User...*
-
-
 *When I...*
 
 
