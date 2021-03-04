@@ -1,8 +1,12 @@
 import React from 'react'
+import './Message.css'
 
 const Message = () => {
   return (
-    <h3>Message</h3>
+    <div>
+      <h3>Something clever will go here soon...</h3>
+      <button></button>
+    </div>
   )
 }
 
