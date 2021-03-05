@@ -9,5 +9,5 @@ const Details = () => (
   </section>
 )
 
-export default React
+export default Details
 
