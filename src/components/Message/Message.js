@@ -8,7 +8,11 @@ const Message = ({quote}) => {
       {quote && 
         <section>
           <h3>{quote}</h3>
-          <button></button>
+          <button
+            className='details-btn'
+          >
+          Get Details Here!
+          </button>
         </section>
       }
     </div>
