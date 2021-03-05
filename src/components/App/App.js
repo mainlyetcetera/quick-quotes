@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import { Route } from 'react-router-dom'
 import Header from '../Header/Header.js'
 import Message from '../Message/Message.js'
 import Selector from '../Selector/Selector.js'
 import Details from '../Details/Details.js'
+import { Route } from 'react-router-dom'
 import { fetchData } from '../../utils/api.js'
 import './App.css'
 
@@ -38,11 +38,9 @@ const App = () => {
         exact path='/details'
         render={() => {
           return (
-            <div>
-              <Details 
-                info={info}
-              />
-            </div>
+            <Details 
+              info={info}
+            />
           )
         }}
       />
