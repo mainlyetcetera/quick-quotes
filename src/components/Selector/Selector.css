@@ -5,3 +5,8 @@ form {
 select {
   width: 15em;
 }
+
+.select-btn {
+  width: 10em;
+  height: 2em;
+}
