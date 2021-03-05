@@ -3,6 +3,7 @@ import { Route } from 'react-router-dom'
 import Header from '../Header/Header.js'
 import Message from '../Message/Message.js'
 import Selector from '../Selector/Selector.js'
+import Details from '../Details/Details.js'
 import { fetchData } from '../../utils/api.js'
 import './App.css'
 
@@ -23,6 +24,16 @@ const App = () => {
   return (
     <div>
       <Header />
+      <Route
+        exact path='/details'
+        render={() => {
+          return (
+            <div>
+              <Details />
+            </div>
+          )
+        }}
+      />
       <Route
         exact path='/'
         render={() => {
