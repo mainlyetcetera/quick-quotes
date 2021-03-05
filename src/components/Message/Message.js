@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './Message.css'
 
 const Message = ({quote}) => {
@@ -8,11 +9,12 @@ const Message = ({quote}) => {
       {quote && 
         <section>
           <h3>{quote}</h3>
-          <button
+          <Link
             className='details-btn'
+            to='/details'
           >
           Get Details Here!
-          </button>
+          </Link>
         </section>
       }
     </div>
