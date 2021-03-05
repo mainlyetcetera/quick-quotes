@@ -4,7 +4,6 @@ import { fetchData } from '../../utils/api.js'
 import capitalize from '../../utils/capitalize.js'
 
 const Selector = ({chooseCategory, generateQuote}) => {
-  const [quote, setQuote] = useState(null)
   const [categories, setCategories] = useState([])
 
   useEffect(() => {
@@ -17,40 +16,22 @@ const Selector = ({chooseCategory, generateQuote}) => {
     generateCategories()
   }, [])
 
-  useEffect(() => {
-    const result = async () => {
-      const url = 'https://api.quotable.io/random'
-      const data = await fetchData(url)
-      setQuote(data.content)
-    }
-
-    result()
-  }, [])
-
   const displayCategories = () => (
     categories.map(category => {
-      const {quoteCount, _id} = category
-      let {name} = category
-      let result
-      name = capitalize(name) 
-      if (quoteCount) { 
-        result = (
-          <option 
-            value={name}
-            key={_id}
-          >
-          {name}
-          </option>
-        )
-      }
-
-      return result
+      const {name, quoteCount, _id} = category
+      return quoteCount ? (
+        <option 
+          value={name}
+          key={_id}
+        >
+        {capitalize(name)}
+        </option>
+      ) : null
     })
   )
 
   return (
     <div>
-      <h2>{quote}</h2>
       <form>
         <select
           onChange={e => chooseCategory(e.target.value)}
