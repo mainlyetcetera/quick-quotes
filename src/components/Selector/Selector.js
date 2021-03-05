@@ -3,7 +3,7 @@ import './Selector.css'
 import { fetchData } from '../../utils/api.js'
 import capitalize from '../../utils/capitalize.js'
 
-const Selector = ({chooseCategory}) => {
+const Selector = ({chooseCategory, generateQuote}) => {
   const [quote, setQuote] = useState(null)
   const [categories, setCategories] = useState([])
 
@@ -52,12 +52,20 @@ const Selector = ({chooseCategory}) => {
     <div>
       <h2>{quote}</h2>
       <form>
-        <select>
+        <select
+          onChange={e => chooseCategory(e.target.value)}
+        >
           <option value=''>
             Please pick a category
           </option>
           {displayCategories()}
         </select>
+      <button
+        onClick={e => {
+          e.preventDefault()
+          generateQuote()
+        }}
+      ></button>
       </form>
     </div>
   )
