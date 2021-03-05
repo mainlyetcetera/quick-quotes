@@ -42,6 +42,7 @@ const Selector = ({chooseCategory, generateQuote}) => {
           {displayCategories()}
         </select>
       <button
+        className='select-btn'
         onClick={e => {
           e.preventDefault()
           generateQuote()
