@@ -3,7 +3,7 @@ import './Selector.css'
 import { fetchData } from '../../utils/api.js'
 import capitalize from '../../utils/capitalize.js'
 
-const Selector = () => {
+const Selector = ({chooseCategory}) => {
   const [quote, setQuote] = useState(null)
   const [categories, setCategories] = useState([])
 
