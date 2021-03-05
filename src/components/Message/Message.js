@@ -1,10 +1,11 @@
 import React from 'react'
 import './Message.css'
 
-const Message = () => {
+const Message = ({quote}) => {
   return (
     <div>
-      <h3>Something clever will go here soon...</h3>
+      {!quote && <h3>Something clever will go here soon...</h3>}
+      {quote && <h3>{quote}</h3>}
       <button></button>
     </div>
   )
