@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Route } from 'react-router-dom'
 import Header from '../Header/Header.js'
 import Message from '../Message/Message.js'
 import Selector from '../Selector/Selector.js'
@@ -22,12 +23,21 @@ const App = () => {
   return (
     <div>
       <Header />
-      <Selector 
-        chooseCategory={chooseCategory}
-        generateQuote={generateQuote}
-      />
-      <Message 
-        quote={quote}
+      <Route
+        exact path='/'
+        render={() => {
+          return (
+            <div>
+              <Selector 
+                chooseCategory={chooseCategory}
+                generateQuote={generateQuote}
+              />
+              <Message 
+                quote={quote}
+              />
+            </div>
+          )
+        }}
       />
     </div>
   )
