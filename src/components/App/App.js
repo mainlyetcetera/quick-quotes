@@ -16,24 +16,30 @@ const App = () => {
     author: ''
   })
   const [quote, setQuote] = useState(null)
-  const [err, setErr] = useState(true)
+  const [err, setErr] = useState(null)
 
   const chooseCategory = choice => {
     setCategory(choice)
   }
 
   const generateQuote = async () => {
-    const url = `https://api.uotable.io/random?tags=${category}`
-    const data = await fetchData(url)
-      .catch(err => setErr(true))
-    setInfo({
-      tags: data.tags, 
-      content: data.content,
-      author: data.author
-    })
-    setQuote(data.content)
+    try {
+      const url = `https://api.quotable.io/andom?tags=${category}`
+      const data = await fetchData(url)
+      setInfo({
+        tags: data.tags,
+        content: data.content,
+        author: data.author
+      })
+      setQuote(data.content)
+    } catch (err) {
+      setErr({
+        status: err.status,
+        text: err.statusText
+      })
+    }
   }
-  
+
   return (
     <div>
       <Header />
@@ -61,7 +67,7 @@ const App = () => {
               />
             </div>
           ) : (
-            <Error />
+            <Error status={err.status} text={err.text}/>
           )
         }}
       />
