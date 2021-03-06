@@ -24,7 +24,7 @@ const App = () => {
 
   const generateQuote = async () => {
     try {
-      const url = `https://api.quotable.io/andom?tags=${category}`
+      const url = `https://api.quotable.io/random?tags=${category}`
       const data = await fetchData(url)
       setInfo({
         tags: data.tags,
