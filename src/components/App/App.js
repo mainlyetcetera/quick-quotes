@@ -3,6 +3,7 @@ import Header from '../Header/Header.js'
 import Message from '../Message/Message.js'
 import Selector from '../Selector/Selector.js'
 import Details from '../Details/Details.js'
+import Error from '../Error/Error.js'
 import { Route } from 'react-router-dom'
 import { fetchData } from '../../utils/api.js'
 import './App.css'
@@ -15,22 +16,30 @@ const App = () => {
     author: ''
   })
   const [quote, setQuote] = useState(null)
+  const [err, setErr] = useState(null)
 
   const chooseCategory = choice => {
     setCategory(choice)
   }
 
   const generateQuote = async () => {
-    const url = `https://api.quotable.io/random?tags=${category}`
-    const data = await fetchData(url)
-    setInfo({
-      tags: data.tags, 
-      content: data.content,
-      author: data.author
-    })
-    setQuote(data.content)
+    try {
+      const url = `https://api.quotable.io/andom?tags=${category}`
+      const data = await fetchData(url)
+      setInfo({
+        tags: data.tags,
+        content: data.content,
+        author: data.author
+      })
+      setQuote(data.content)
+    } catch (err) {
+      setErr({
+        status: err.status,
+        text: err.statusText
+      })
+    }
   }
-  
+
   return (
     <div>
       <Header />
@@ -47,7 +56,7 @@ const App = () => {
       <Route
         exact path='/'
         render={() => {
-          return (
+          return !err ? (
             <div>
               <Selector 
                 chooseCategory={chooseCategory}
@@ -57,6 +66,8 @@ const App = () => {
                 quote={quote}
               />
             </div>
+          ) : (
+            <Error status={err.status} text={err.text}/>
           )
         }}
       />
