@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import './Details.css'
 
@@ -16,3 +17,6 @@ const Details = ({info}) => {
 
 export default Details
 
+Details.propTypes = {
+  info: PropTypes.object
+}

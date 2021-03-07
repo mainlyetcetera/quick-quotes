@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import PropTypes from 'prop-types'
 import './Selector.css'
 import { fetchData } from '../../utils/api.js'
 import capitalize from '../../utils/capitalize.js'
@@ -54,3 +55,8 @@ const Selector = ({chooseCategory, generateQuote}) => {
 }
 
 export default Selector
+
+Selector.propTypes = {
+  chooseCategory: PropTypes.func,
+  generateQuote: PropTypes.func
+} 

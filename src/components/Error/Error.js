@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const Error = ({status, text}) => (
   <section>
@@ -10,3 +11,8 @@ const Error = ({status, text}) => (
 )
 
 export default Error
+
+Error.propTypes = { 
+  status: PropTypes.number,
+  text: PropTypes.string
+}
