@@ -36,6 +36,32 @@ describe('the main view', () => {
       .contains('Welcome!')
   })
 
+  it('should have drop-down to select categories', () => { 
+    cy
+      .get('select')
+      .select('Business').invoke('val')
+
+    cy
+      .get('select')
+      .should('have.value', 'business')
+
+    cy
+      .get('select')
+      .select('Success').invoke('val')
+
+    cy
+      .get('select')
+      .should('have.value', 'success')
+
+    cy
+      .get('select')
+      .select('Wisdom').invoke('val')
+
+    cy
+      .get('select')
+      .should('have.value', 'wisdom')
+  })
+
   it('should be able to search for quotes by category', () => {
   })
 
