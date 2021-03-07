@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import './Message.css'
 
@@ -22,3 +23,7 @@ const Message = ({quote}) => {
 }
 
 export default Message
+
+Message.propTypes = {
+  quote: PropTypes.string
+}
