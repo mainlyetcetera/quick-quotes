@@ -26,8 +26,6 @@ describe('the main view', () => {
           body: data
         })
       })
-    // we should have interecepts for each category?
-    // may shorten to two categories
     
     cy
       .visit('http://localhost:3000')
@@ -111,8 +109,5 @@ describe('the main view', () => {
       .get('h3')
       .should('not.contain', 'Silence is the sleep that nourishes wisdom.')
       .contains('The industrial landscape is already littered with remains')
-  })
-
-  it('should see an error message when the quotes don\'t load', () => {
   })
 })
