@@ -36,6 +36,14 @@ describe('the details view', () => {
   })
 
   it('should still have a header', () => {
+    cy
+      .get('header')
+      .find('h1')
+      .contains('QuickQuotes')
+
+      .get('header')
+      .find('h2')
+      .contains('Welcome!')
   })
 
   it('should show the details of the quote', () => {
