@@ -18,12 +18,22 @@ describe('the main view', () => {
         })
       })
 
+    // we should have interecepts for each category?
+    // may shorten to two categories
+    
     cy
       .visit('http://localhost:3000')
   })
 
   it('should render a header with a greeting', () => {
-    expect(true).to.eql(true)
+    cy
+      .get('header')
+      .find('h1')
+      .contains('QuickQuotes')
+
+      .get('header')
+      .find('h2')
+      .contains('Welcome!')
   })
 
   it('should be able to search for quotes by category', () => {
