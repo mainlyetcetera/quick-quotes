@@ -62,7 +62,7 @@ describe('the main view', () => {
       .should('have.value', 'wisdom')
   })
 
-  it.only('should be able to search for a quote by category', () => {
+  it('should be able to search for a quote by category', () => {
     cy
       .get('h3')
       .contains('Something clever will go here soon...')
@@ -82,6 +82,35 @@ describe('the main view', () => {
   })
 
   it('should be able to search for quotes in two categories', () => {
+    cy
+      .get('h3')
+      .contains('Something clever will go here soon...')
+
+      .get('select')
+      .select('Wisdom').invoke('val')
+
+      .get('select')
+      .should('have.value', 'wisdom')
+
+      .get('button')
+      .click()
+
+      .get('h3')
+      .should('not.contain', 'Something clever will go here soon...')
+      .contains('Silence is the sleep that nourishes wisdom.')
+
+      .get('select')
+      .select('Business').invoke('val')
+
+      .get('select')
+      .should('have.value', 'business')
+
+      .get('button')
+      .click()
+
+      .get('h3')
+      .should('not.contain', 'Silence is the sleep that nourishes wisdom.')
+      .contains('The industrial landscape is already littered with remains')
   })
 
   it('should see an error message when the quotes don\'t load', () => {
