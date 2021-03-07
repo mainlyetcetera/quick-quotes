@@ -52,7 +52,6 @@ describe('the details view', () => {
       .children('article:first')
       .contains('Silence is the sleep that nourishes wisdom.')
 
-
       .get('section')
       .children('article:nth-child(2)')
       .contains('Francis Bacon')
@@ -66,5 +65,17 @@ describe('the details view', () => {
   })
 
   it('should be able to return to the main view', () => {
+    cy
+      .get('section')
+      .children('article:nth-child(2)')
+      .contains('Francis Bacon')
+
+      .get('section a')
+      .contains('Return')
+      .click()
+
+      .get('h3')
+      .should('not.contain', 'Something clever will go here soon...')
+      .contains('Silence is the sleep that nourishes wisdom.')
   })
 })
