@@ -10,7 +10,7 @@ describe('the main view', () => {
       })
 
     cy
-      .fixture('../fixtures/quote.json')
+      .fixture('../fixtures/wisdom-quote.json')
       .then(data => {
         cy.intercept('GET', 'https://api.quotable.io/random?tags=wisdom', {
           statusCode: 200,
@@ -18,6 +18,14 @@ describe('the main view', () => {
         })
       })
 
+    cy
+      .fixture('../fixtures/biz-quote.json')
+      .then(data => {
+        cy.intercept('GET', 'https://api.quotable.io/random?tags=business', {
+          statusCode: 200,
+          body: data
+        })
+      })
     // we should have interecepts for each category?
     // may shorten to two categories
     
@@ -47,14 +55,6 @@ describe('the main view', () => {
 
     cy
       .get('select')
-      .select('Success').invoke('val')
-
-    cy
-      .get('select')
-      .should('have.value', 'success')
-
-    cy
-      .get('select')
       .select('Wisdom').invoke('val')
 
     cy
@@ -62,7 +62,26 @@ describe('the main view', () => {
       .should('have.value', 'wisdom')
   })
 
-  it('should be able to search for quotes by category', () => {
+  it.only('should be able to search for a quote by category', () => {
+    cy
+      .get('h3')
+      .contains('Something clever will go here soon...')
+
+      .get('select')
+      .select('Wisdom').invoke('val')
+
+      .get('select')
+      .should('have.value', 'wisdom')
+
+      .get('button')
+      .click()
+
+      .get('h3')
+      .should('not.contain', 'Something clever will go here soon...')
+      .contains('Silence is the sleep that nourishes wisdom.')
+  })
+
+  it('should be able to search for quotes in two categories', () => {
   })
 
   it('should see an error message when the quotes don\'t load', () => {
