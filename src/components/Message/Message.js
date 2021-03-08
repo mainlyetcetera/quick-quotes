@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import './Message.css'
 
-const Message = ({quote}) => {
+const Message = ({quote, favoriteQuote}) => {
   return (
     <div>
       {!quote && <h3>Something clever will go here soon...</h3>}
@@ -16,7 +16,11 @@ const Message = ({quote}) => {
           >
           Get Details Here!
           </Link>
-          <button>Favorite this!</button>
+          <button
+            onClick={() => favoriteQuote()}
+          >
+          Favorite this!
+          </button>
         </section>
       }
     </div>
@@ -26,5 +30,6 @@ const Message = ({quote}) => {
 export default Message
 
 Message.propTypes = {
-  quote: PropTypes.string
+  quote: PropTypes.string,
+  favoriteQuote: PropTypes.func
 }
