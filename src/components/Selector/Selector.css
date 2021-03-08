@@ -1,12 +1,15 @@
 form {
   background-color: blue;
+  display: flex;
+  justify-content: space-around;
 }
 
 select {
-  width: 15em;
+  width: 12em;
 }
 
 .select-btn {
   width: 10em;
   height: 2em;
 }
+
