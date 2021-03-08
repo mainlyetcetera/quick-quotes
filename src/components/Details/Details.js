@@ -7,9 +7,9 @@ const Details = ({info}) => {
   const {content, author, tags} = info
   return (
     <section>
-      <article>{content}</article>
-      <article>{author}</article>
-      <article>{tags}</article>
+      <article>Quote: {content}</article>
+      <article>Author: {author}</article>
+      <article>Categories: {tags}</article>
       <Link to='/'>Return</Link>
     </section>
   )

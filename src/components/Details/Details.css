@@ -1,3 +1,8 @@
-section {
-  backgroud-color: teal;
+article {
+  text-align: center;
+  margin-bottom: .5em;
+}
+
+a {
+  color: #90ee90;
 }
