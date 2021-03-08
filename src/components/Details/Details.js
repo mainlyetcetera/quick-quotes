@@ -11,6 +11,7 @@ const Details = ({info}) => {
       <article>Author: {author}</article>
       <article>Categories: {tags}</article>
       <Link to='/'>Return</Link>
+      <button>Favorite this!</button>
     </section>
   )
 }
