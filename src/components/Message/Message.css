@@ -1,4 +1,17 @@
+section {
+  background-color: teal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .details-btn {
   width: 10em;
   height: 1em;
+}
+
+h3 {
+  font-size: 2em;
+  text-align: center;  
 }
