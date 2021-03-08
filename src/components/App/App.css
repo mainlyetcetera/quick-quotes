@@ -1,3 +1,8 @@
+* {
+  color: #d4af37;
+  font-family: Snell Roundhand, cursive;
+}
+
 main {
   background-color: #654321;
   background-image: url(../../assets/dark-wood.png);
