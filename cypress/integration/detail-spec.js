@@ -31,7 +31,7 @@ describe('the details view', () => {
       .get('button')
       .click()
 
-      .get('a')
+      .get('section > a')
       .click()
   })
 
