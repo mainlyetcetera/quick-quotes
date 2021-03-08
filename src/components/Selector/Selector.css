@@ -11,5 +11,9 @@ select {
 .select-btn {
   width: 10em;
   height: 2em;
+  background-color: green;
 }
 
+.select-btn:disabled {
+  background-color: #78a7c6;
+}
