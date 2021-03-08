@@ -16,6 +16,7 @@ const Message = ({quote}) => {
           >
           Get Details Here!
           </Link>
+          <button>Favorite this!</button>
         </section>
       }
     </div>
