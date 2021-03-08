@@ -42,7 +42,7 @@ const App = () => {
   }
 
   return (
-    <div>
+    <main>
       <Header />
       <Route
         exact path='/details'
@@ -73,7 +73,7 @@ const App = () => {
         }}
       />
     <Footer />
-    </div>
+    </main>
   )
 }
 
