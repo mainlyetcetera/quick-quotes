@@ -6,6 +6,7 @@ import capitalize from '../../utils/capitalize.js'
 
 const Selector = ({chooseCategory, generateQuote}) => {
   const [categories, setCategories] = useState([])
+  const [buttonDisabled, setButtonDisabled] = useState(true)
 
   useEffect(() => {
     const generateCategories = async () => {
@@ -31,24 +32,32 @@ const Selector = ({chooseCategory, generateQuote}) => {
     })
   )
 
+  const handleChange = e => {
+    chooseCategory(e.target.value)
+    e.target.value !== '' ? setButtonDisabled(false) : setButtonDisabled(true)
+  }
+
+  const handleClick = e => {
+    e.preventDefault()
+    generateQuote()
+  }
+
   return (
     <div>
       <form>
         <select
-          onChange={e => chooseCategory(e.target.value)}
+          onChange={e => handleChange(e)}
         >
           <option value=''>
             Please pick a category
           </option>
           {displayCategories()}
         </select>
-      <button
-        className='select-btn'
-        onClick={e => {
-          e.preventDefault()
-          generateQuote()
-        }}
-      ></button>
+        <button
+          className='select-btn'
+          onClick={e => handleClick(e)}
+          disabled={buttonDisabled}
+        ></button>
       </form>
     </div>
   )
