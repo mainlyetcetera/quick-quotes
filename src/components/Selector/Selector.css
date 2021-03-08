@@ -1,5 +1,6 @@
 form {
-  background-color: blue;
+  background-color: #654321;
+  background-image: url(../../assets/dark-wood.png);
   display: flex;
   justify-content: space-around;
 }
@@ -11,7 +12,7 @@ select {
 .select-btn {
   width: 10em;
   height: 2em;
-  background-color: green;
+  background-color: #444444;
 }
 
 .select-btn:disabled {
