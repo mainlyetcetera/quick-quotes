@@ -18,6 +18,7 @@ const App = () => {
   })
   const [quote, setQuote] = useState(null)
   const [err, setErr] = useState(null)
+  const [favorites, setFavorites] = useState([])
 
   const chooseCategory = choice => {
     setCategory(choice)
@@ -41,6 +42,10 @@ const App = () => {
     }
   }
 
+  const favoriteQuote = () => {
+    setFavorites([...favorites, info])
+  }
+
   return (
     <main>
       <Header />
@@ -50,6 +55,7 @@ const App = () => {
           return (
             <Details 
               info={info}
+              favoriteQuote={favoriteQuote}
             />
           )
         }}
@@ -65,6 +71,7 @@ const App = () => {
               />
               <Message 
                 quote={quote}
+                favoriteQuote={favoriteQuote}
               />
             </div>
           ) : (
