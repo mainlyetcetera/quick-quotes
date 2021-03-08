@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import './Details.css'
 
-const Details = ({info}) => {
+const Details = ({info, favoriteQuote}) => {
   const {content, author, tags} = info
   return (
     <section>
@@ -11,6 +11,11 @@ const Details = ({info}) => {
       <article>Author: {author}</article>
       <article>Categories: {tags}</article>
       <Link to='/'>Return</Link>
+      <button 
+        onClick={() => favoriteQuote()}
+      >
+      Favorite this!
+      </button>
     </section>
   )
 }
@@ -18,5 +23,6 @@ const Details = ({info}) => {
 export default Details
 
 Details.propTypes = {
-  info: PropTypes.object
+  info: PropTypes.object,
+  favoriteQuote: PropTypes.func
 }

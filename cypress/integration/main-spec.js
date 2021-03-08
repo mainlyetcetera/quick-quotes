@@ -103,7 +103,7 @@ describe('the main view', () => {
       .get('select')
       .should('have.value', 'business')
 
-      .get('button')
+      .get('form > button')
       .click()
 
       .get('h3')

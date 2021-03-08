@@ -3,6 +3,7 @@ import Header from '../Header/Header.js'
 import Message from '../Message/Message.js'
 import Selector from '../Selector/Selector.js'
 import Details from '../Details/Details.js'
+import Favorites from '../Favorites/Favorites.js'
 import Error from '../Error/Error.js'
 import Footer from '../Footer/Footer.js'
 import { Route } from 'react-router-dom'
@@ -18,6 +19,7 @@ const App = () => {
   })
   const [quote, setQuote] = useState(null)
   const [err, setErr] = useState(null)
+  const [favorites, setFavorites] = useState([])
 
   const chooseCategory = choice => {
     setCategory(choice)
@@ -41,6 +43,10 @@ const App = () => {
     }
   }
 
+  const favoriteQuote = () => {
+    setFavorites([...favorites, info])
+  }
+
   return (
     <main>
       <Header />
@@ -50,6 +56,17 @@ const App = () => {
           return (
             <Details 
               info={info}
+              favoriteQuote={favoriteQuote}
+            />
+          )
+        }}
+      />
+      <Route
+        exact path='/favorites'
+        render={() => {
+          return (
+            <Favorites 
+              favorites={favorites}
             />
           )
         }}
@@ -65,6 +82,7 @@ const App = () => {
               />
               <Message 
                 quote={quote}
+                favoriteQuote={favoriteQuote}
               />
             </div>
           ) : (
