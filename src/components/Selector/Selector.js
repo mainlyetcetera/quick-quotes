@@ -37,6 +37,11 @@ const Selector = ({chooseCategory, generateQuote}) => {
     e.target.value !== '' ? setButtonDisabled(false) : setButtonDisabled(true)
   }
 
+  const handleClick = e => {
+    e.preventDefault()
+    generateQuote()
+  }
+
   return (
     <div>
       <form>
@@ -50,10 +55,7 @@ const Selector = ({chooseCategory, generateQuote}) => {
         </select>
         <button
           className='select-btn'
-          onClick={e => {
-            e.preventDefault()
-            generateQuote()
-          }}
+          onClick={e => handleClick(e)}
           disabled={buttonDisabled}
         ></button>
       </form>
