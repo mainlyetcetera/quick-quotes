@@ -47,8 +47,9 @@ const App = () => {
     const hasQuote = favorites.find(
       favorite => favorite.content === info.content
     )
-
+      
     !hasQuote && setFavorites([...favorites, info])
+    !hasQuote && alert('success!')
   }
 
   const removeQuote = content => {
@@ -63,10 +64,13 @@ const App = () => {
         exact path='/details'
         render={() => {
           return (
-            <Details 
-              info={info}
-              favoriteQuote={favoriteQuote}
-            />
+            <div>
+              <Details 
+                info={info}
+                favoriteQuote={favoriteQuote}
+              />
+              <Footer />
+            </div>
           )
         }}
       />
@@ -74,10 +78,13 @@ const App = () => {
         exact path='/favorites'
         render={() => {
           return (
-            <Favorites 
-              favorites={favorites}
-              removeQuote={removeQuote}
-            />
+            <>
+              <Favorites 
+                favorites={favorites}
+                removeQuote={removeQuote}
+              />
+              <Footer />
+            </>
           )
         }}
       />
@@ -94,13 +101,16 @@ const App = () => {
                 quote={quote}
                 favoriteQuote={favoriteQuote}
               />
+              <Footer />
             </div>
           ) : (
-            <Error status={err.status} text={err.text}/>
+            <>
+              <Error status={err.status} text={err.text}/>
+              <Footer />
+            </>
           )
         }}
       />
-    <Footer />
     </main>
   )
 }

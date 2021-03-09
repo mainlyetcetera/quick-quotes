@@ -57,7 +57,9 @@ const Selector = ({chooseCategory, generateQuote}) => {
           className='select-btn'
           onClick={e => handleClick(e)}
           disabled={buttonDisabled}
-        ></button>
+        >
+        Get quote!
+        </button>
       </form>
     </div>
   )
