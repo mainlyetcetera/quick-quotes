@@ -11,7 +11,9 @@ const Favorites = ({favorites, removeQuote}) => {
         <article>Categories: {tags}</article>
         <button
           onClick={e => removeQuote(content)}
-        ></button>
+        >
+        Remove from Favorites
+        </button>
       </section>
     )
   })

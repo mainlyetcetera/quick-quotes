@@ -44,7 +44,11 @@ const App = () => {
   }
 
   const favoriteQuote = () => {
-    setFavorites([...favorites, info])
+    const hasQuote = favorites.find(
+      favorite => favorite.content === info.content
+    )
+
+    !hasQuote && setFavorites([...favorites, info])
   }
 
   const removeQuote = content => {
