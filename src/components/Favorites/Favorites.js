@@ -3,10 +3,15 @@ import PropTypes from 'prop-types'
 import './Favorites.css'
 
 const Favorites = ({favorites, removeQuote}) => {
+  let key = 0
   const toDisplay = favorites.map(favorite => {
     const {content, author, tags} = favorite
+    key += 1
     return (
-      <section className='favorite'>
+      <section 
+        className='favorite'
+        key={key}
+      >
         <article>Quote: {content}</article>
         <article>Author: {author}</article>
         <article>Categories: {tags}</article>
