@@ -18,6 +18,27 @@ This project is the final project for [Turing School of Software and Design's](h
 - create user personas and be driven by user stories
 - design my own MVP
 
+## Reflections
+#### wins:
+- had little issue getting state to cooperate
+  - kept state where it should be
+  - easily passed props, including methods
+- solid `Cypress` testing 
+  - aiming to test happy and sad paths
+- kept myself to a simple MVP
+  - did not try to overdo it
+  - stayed focused on making a solid MVP
+- using `async/await`, displayed user-friendly error-handling!
+- properly watching passed props' types with `PropTypes` 
+
+#### areas of growth:
+- though working, `HashRouter` deployment could work better
+  - starts on a view that's not intended and not intuitive
+- want more from the styling
+  - got a semblance of mobile-first, not much attention paid desktop view
+- a couple functions not strictly SRP
+- no specific data-cleaning
+
 ### Built With
 
 * [React](https://reactjs.org/docs/create-a-new-react-app.html)
