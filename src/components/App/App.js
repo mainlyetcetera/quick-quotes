@@ -47,6 +47,11 @@ const App = () => {
     setFavorites([...favorites, info])
   }
 
+  const removeQuote = content => {
+    const removed = favorites.filter(favorite => favorite.content !== content)
+    setFavorites(removed)
+  }
+
   return (
     <main>
       <Header />
@@ -67,6 +72,7 @@ const App = () => {
           return (
             <Favorites 
               favorites={favorites}
+              removeQuote={removeQuote}
             />
           )
         }}
