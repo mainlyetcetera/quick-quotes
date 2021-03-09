@@ -100,7 +100,7 @@ describe('the main view', () => {
       .contains('Remove from Favorites')
   })
 
-  it.only('should be able to delete a favorite', () => {
+  it('should be able to delete a favorite', () => {
     cy
       .get('h3')
       .contains('Something clever will go here soon...')
