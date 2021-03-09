@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/quick-quotes/static/css/main.8aa5ac42.chunk.css",
-    "main.js": "/quick-quotes/static/js/main.1bbec4c7.chunk.js",
-    "main.js.map": "/quick-quotes/static/js/main.1bbec4c7.chunk.js.map",
+    "main.js": "/quick-quotes/static/js/main.be43932e.chunk.js",
+    "main.js.map": "/quick-quotes/static/js/main.be43932e.chunk.js.map",
     "runtime-main.js": "/quick-quotes/static/js/runtime-main.9c99ba7c.js",
     "runtime-main.js.map": "/quick-quotes/static/js/runtime-main.9c99ba7c.js.map",
-    "static/js/2.c07225b4.chunk.js": "/quick-quotes/static/js/2.c07225b4.chunk.js",
-    "static/js/2.c07225b4.chunk.js.map": "/quick-quotes/static/js/2.c07225b4.chunk.js.map",
+    "static/js/2.110cab48.chunk.js": "/quick-quotes/static/js/2.110cab48.chunk.js",
+    "static/js/2.110cab48.chunk.js.map": "/quick-quotes/static/js/2.110cab48.chunk.js.map",
     "index.html": "/quick-quotes/index.html",
     "static/css/main.8aa5ac42.chunk.css.map": "/quick-quotes/static/css/main.8aa5ac42.chunk.css.map",
-    "static/js/2.c07225b4.chunk.js.LICENSE.txt": "/quick-quotes/static/js/2.c07225b4.chunk.js.LICENSE.txt",
+    "static/js/2.110cab48.chunk.js.LICENSE.txt": "/quick-quotes/static/js/2.110cab48.chunk.js.LICENSE.txt",
     "static/media/Header.css": "/quick-quotes/static/media/brown_marble.d77958c6.jpg",
     "static/media/App.css": "/quick-quotes/static/media/dark-wood.0384df4c.png"
   },
   "entrypoints": [
     "static/js/runtime-main.9c99ba7c.js",
-    "static/js/2.c07225b4.chunk.js",
+    "static/js/2.110cab48.chunk.js",
     "static/css/main.8aa5ac42.chunk.css",
-    "static/js/main.1bbec4c7.chunk.js"
+    "static/js/main.be43932e.chunk.js"
   ]
 }
