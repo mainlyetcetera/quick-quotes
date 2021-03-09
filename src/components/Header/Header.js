@@ -6,8 +6,8 @@ const Header = () => (
   <header>
     <h1>QuickQuotes</h1>
     <h2>Welcome!</h2>
-    <Link to='/'>To Home</Link>
-    <Link to='/favorites'>To Favorites</Link>
+    <Link className='navigation' to='/'>To Home</Link>
+    <Link className='navigation' to='/favorites'>To Favorites</Link>
   </header>
 )
 
