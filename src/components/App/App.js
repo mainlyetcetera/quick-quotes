@@ -47,8 +47,9 @@ const App = () => {
     const hasQuote = favorites.find(
       favorite => favorite.content === info.content
     )
-
+      
     !hasQuote && setFavorites([...favorites, info])
+    !hasQuote && alert('success!')
   }
 
   const removeQuote = content => {
