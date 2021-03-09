@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+## About The Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![home-page](https://user-images.githubusercontent.com/70294115/110416690-5e6f7080-8051-11eb-8436-7d66618990e6.png)
 
-## Available Scripts
+You're in a discussion with friends. And someone says: "I need a good quote on this topic for inspiration!"
+And here YOU COME to the rescue! Pull out `QuickQuotes`, select a category, and get a relevant quote instantly!
 
-In the project directory, you can run:
+That's `QuickQuotes`, your one-stop shop for quotes on almost any relevant topic! But just because it's fast doesn't mean it's not versatile! You can `favorite` any quote you come across for later refernce, so no worries about losing your next favorite quote! 
 
-### `npm start`
+This project is the final project for [Turing School of Software and Design's](https://turing.io/) Frontend Mod 3. For this project we were challenged to not only use React to build an entire app with the help of an outside API, but we needed to make the app for a specific [niche audience](https://frontend.turing.io/projects/module-3/niche-audience.html). The audience I chose was: a person who wants to quickly access a quote in a conversation AND be able to reference it later!
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Learning Goals
+- use React hooks to set up and maintain state
+- include thorough `Cypress` end-to-end testing
+- employ `React Router`, which evolved into `Hash Router` to allow for multiple routes and urls
+- deploy the app on GitHub Pages
+- successfully use asynchronous JavaScript with the use of `async/await`, including error handling
+- create user personas and be driven by user stories
+- design my own MVP
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Built With
 
-### `npm test`
+* [React](https://reactjs.org/docs/create-a-new-react-app.html)
+* [Cypress](https://www.cypress.io/)
+* [Prop Types](https://reactjs.org/docs/typechecking-with-proptypes.html)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
+To get a local copy up and running follow these simple example steps.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. No API key needed! I used [Quotable](https://github.com/lukePeavey/quotable)
+2. Clone the repo
+   ```sh
+   git clone https://github.com/mainlyetcetera/quick-quotes.git
+   ```
+3. Install NPM packages
+   ```sh
+   npm install
+   ```
+4. Launch the app!
+   ```sh
+   npm start
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Usage
 
-### `npm run eject`
+* the deployed version of this site may be found [here](https://mainlyetcetera.github.io/quick-quotes/)
+* you will need to click on `To Home` to begin using the app in this version
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![from-deployed-start](https://media.giphy.com/media/hUQI4PrFFjXzbG30Id/giphy.gif)
+![favorite-from-main](https://media.giphy.com/media/s3D02QGO991bHcvk4O/giphy.gif)
+![favorite-from-details](https://media.giphy.com/media/bcS4SwcI2YhNflDMpl/giphy.gif)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Roadmap
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+See the [open issues](https://github.com/mainlyetcetera/quick-quotes/issues) for a list of proposed features (and known issues).
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Contributing
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-### Code Splitting
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+## Contact
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Eric Campbell - [My GitHub](https://github.com/mainlyetcetera/)
 
-### Making a Progressive Web App
+Project Link: [quick-quotes link](https://github.com/mainlyetcetera/quick-quotes)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<img src="https://avatars0.githubusercontent.com/u/70294115?s=460&u=b24fae5febb30e7d1c9507c51ee760dba5e396e5&v=4" alt="Mr. Campbell"
+width="150" height="auto" />
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Acknowledgements
+* [Omar Alvarado for the dark-wood!](https://www.transparenttextures.com/dark-wood.html)
+* [Zingerbug for the marble!](https://www.zingerbug.com/background.php?MyFile=brown_marble.php&ID=C720.php)
