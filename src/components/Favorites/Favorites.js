@@ -1,8 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
 
-const Favorites = ({favorites}) => {
+const Favorites = ({favorites, removeQuote}) => {
   const toDisplay = favorites.map(favorite => {
     const {content, author, tags} = favorite
     return (
@@ -10,6 +9,9 @@ const Favorites = ({favorites}) => {
         <article>Quote: {content}</article>
         <article>Author: {author}</article>
         <article>Categories: {tags}</article>
+        <button
+          onClick={e => removeQuote(content)}
+        ></button>
       </section>
     )
   })
@@ -18,3 +20,8 @@ const Favorites = ({favorites}) => {
 }
 
 export default Favorites
+
+Favorites.propTypes = {
+  favorites: PropTypes.array,
+  removeQuote: PropTypes.func
+}
